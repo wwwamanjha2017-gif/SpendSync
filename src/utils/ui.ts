@@ -1,0 +1,75 @@
+import {
+  UtensilsCrossed,
+  ShoppingBag,
+  Car,
+  Film,
+  Zap,
+  HeartPulse,
+  GraduationCap,
+  Landmark,
+  ArrowLeftRight,
+  CircleDollarSign,
+  Bell,
+  LayoutDashboard,
+  List,
+  BarChart3,
+  Settings,
+  Plus,
+  Search,
+  Trash2,
+  ChevronRight,
+  ChevronDown,
+  ChevronLeft,
+  Download,
+  Database,
+  Info,
+  Check,
+  X,
+  ArrowDownLeft,
+  ArrowUpRight,
+  TrendingUp,
+  TrendingDown,
+  Wallet,
+  Filter,
+  Share2,
+  BellRing,
+  MessageSquare,
+  type LucideIcon,
+} from 'lucide-react';
+
+export const ICONS = {
+  UtensilsCrossed, ShoppingBag, Car, Film, Zap, HeartPulse, GraduationCap,
+  Landmark, ArrowLeftRight, CircleDollarSign, Bell, LayoutDashboard, List,
+  BarChart3, Settings, Plus, Search, Trash2, ChevronRight, ChevronDown,
+  ChevronLeft, Download, Database, Info, Check, X, ArrowDownLeft, ArrowUpRight,
+  TrendingUp, TrendingDown, Wallet, Filter, Share2, BellRing, MessageSquare,
+};
+
+export function getCategoryIcon(category: string): LucideIcon {
+  const map: Record<string, LucideIcon> = {
+    'Food & Dining': UtensilsCrossed,
+    Shopping: ShoppingBag,
+    Transport: Car,
+    Entertainment: Film,
+    'Utilities & Bills': Zap,
+    'Health & Wellness': HeartPulse,
+    Education: GraduationCap,
+    'Financial Services': Landmark,
+    Transfers: ArrowLeftRight,
+    Other: CircleDollarSign,
+  };
+  return map[category] || CircleDollarSign;
+}
+
+export const THEME = {
+  primary: '#6366F1',
+  secondary: '#8B5CF6',
+  background: '#F8FAFC',
+  surface: '#FFFFFF',
+  error: '#EF4444',
+  success: '#10B981',
+  textPrimary: '#1E293B',
+  textSecondary: '#64748B',
+  debit: '#EF4444',
+  credit: '#10B981',
+} as const;
